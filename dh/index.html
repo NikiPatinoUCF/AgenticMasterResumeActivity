@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicole (Niki) Patino — Digital Humanities</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --text: #1a1a1a;
+      --muted: #555;
+      --rule: #d0d0d0;
+      --accent: #2c5f8a;
+      --bg: #fafafa;
+      --max: 780px;
+    }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    .page {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: normal;
+      letter-spacing: 0.01em;
+      color: var(--accent);
+    }
+
+    header .subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-top: 0.35rem;
+      font-style: italic;
+    }
+
+    header .contact {
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 2.75rem;
+    }
+
+    section h2 {
+      font-size: 0.78rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Positioning block */
+    .statement {
+      margin-bottom: 1.25rem;
+    }
+
+    .statement h3 {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .statement p {
+      font-size: 1rem;
+    }
+
+    /* Education entries */
+    .edu-entry {
+      margin-bottom: 1.25rem;
+    }
+
+    .edu-entry h3 {
+      font-size: 1rem;
+      font-weight: bold;
+      color: var(--text);
+    }
+
+    .edu-entry h3 span {
+      font-weight: normal;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .edu-entry ul {
+      list-style: none;
+      margin-top: 0.4rem;
+      padding-left: 0;
+    }
+
+    .edu-entry ul li::before {
+      content: "—";
+      margin-right: 0.5rem;
+      color: var(--muted);
+    }
+
+    .edu-entry ul li {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 0.15rem;
+    }
+
+    /* Project list */
+    .project-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .project-list li {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--rule);
+      font-size: 0.95rem;
+    }
+
+    .project-list li:last-child {
+      border-bottom: none;
+    }
+
+    .project-list li strong {
+      color: var(--text);
+    }
+
+    /* Tools grid */
+    .tools-group {
+      margin-bottom: 1.1rem;
+    }
+
+    .tools-group h3 {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.5rem;
+      list-style: none;
+      padding: 0;
+    }
+
+    .tag-list li {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.82rem;
+      background: #e8eef4;
+      color: var(--accent);
+      padding: 0.2rem 0.55rem;
+      border-radius: 3px;
+    }
+
+    /* Teaching entries */
+    .teaching-entry {
+      margin-bottom: 1.25rem;
+    }
+
+    .teaching-entry h3 {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .teaching-entry h3 span {
+      font-weight: normal;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .teaching-entry ul {
+      list-style: none;
+      margin-top: 0.4rem;
+      padding-left: 0;
+    }
+
+    .teaching-entry ul li::before {
+      content: "—";
+      margin-right: 0.5rem;
+      color: var(--muted);
+    }
+
+    .teaching-entry ul li {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 0.15rem;
+    }
+
+    /* Publications */
+    .pub-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .pub-list li {
+      font-size: 0.95rem;
+      padding: 0.35rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .pub-list li:last-child {
+      border-bottom: none;
+    }
+
+    /* Methodology table */
+    .method-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    .method-table tr {
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .method-table tr:last-child {
+      border-bottom: none;
+    }
+
+    .method-table td {
+      padding: 0.5rem 0.5rem 0.5rem 0;
+      vertical-align: top;
+    }
+
+    .method-table td:first-child {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.82rem;
+      color: var(--accent);
+      white-space: nowrap;
+      padding-right: 1.5rem;
+      width: 1%;
+    }
+
+    .method-table td:last-child {
+      color: var(--muted);
+    }
+
+    /* Creative works */
+    .creative-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .creative-list li {
+      font-size: 0.95rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .creative-list li:last-child {
+      border-bottom: none;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <h1>Nicole (Niki) Patino</h1>
+    <p class="subtitle">Digital Humanities &amp; Computational Scholarship</p>
+    <p class="contact">nicolealanna@aol.com &nbsp;·&nbsp; Kissimmee, FL &nbsp;·&nbsp; vocal.media/authors/nicky-frankly</p>
+  </header>
+
+  <!-- POSITIONING -->
+  <section>
+    <h2>Research Identity</h2>
+
+    <div class="statement">
+      <h3>Academic / PhD</h3>
+      <p>PhD Candidate in Texts &amp; Technology at UCF (EPIC: Editing, Publishing &amp; Interdisciplinary Curating). MFA in Creative Nonfiction. Research focus: how digital publishing platforms shape narrative structure in CNF; computational text analysis; born-digital work; AI and authorial agency.</p>
+    </div>
+
+    <div class="statement">
+      <h3>Language &amp; AI</h3>
+      <p>Detail-focused content specialist with experience reviewing language-based materials for clarity, logic, and grammatical precision. Experience with generative AI tools, LLM behavior analysis, and prompt engineering.</p>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section>
+    <h2>Education</h2>
+
+    <div class="edu-entry">
+      <h3>PhD Candidate — Texts &amp; Technology <span>| University of Central Florida | In Progress</span></h3>
+      <ul>
+        <li>Specialization: Editing, Publishing &amp; Interdisciplinary Curating (EPIC)</li>
+        <li>Research: digital publishing platforms, CNF narrative structure, computational text analysis, AI and authorial agency</li>
+        <li>Coursework: Humanities in the AI Age (Dr. Anastasia Salter)</li>
+      </ul>
+    </div>
+
+    <div class="edu-entry">
+      <h3>Graduate Certificate — Digital Humanities in the Age of AI <span>| UCF | 2025</span></h3>
+    </div>
+
+    <div class="edu-entry">
+      <h3>Interdisciplinary Studies MA / Cognitive Science Certificate <span>| UCF | 2009–2011 | GPA: 3.98</span></h3>
+      <ul>
+        <li>Applied Anthropology and Cognitive Science; qualitative research; IRB process; final ethnography</li>
+        <li>Recipient of Provost's Fellowship; Graduate Teaching Assistant</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section>
+    <h2>Digital Humanities &amp; Computational Projects</h2>
+    <ul class="project-list">
+      <li><strong>Corpus analysis of CNF publishing ecosystems</strong> — web-scraped Brevity, The Rumpus, Catapult; Python, Voyant Tools, D3.js</li>
+      <li><strong>Machine Gospel corpus</strong> — ternary plot analysis and vocabulary field visualizations across Vocal Media contest corpora</li>
+      <li><strong>Distant reading</strong> — Project Gutenberg texts; bag-of-words, network visualization, keyword-in-context concordance</li>
+      <li><strong>Critical geography map</strong> — gig economy labor in Orlando; interactive HTML/CSS/JS application</li>
+      <li><strong>Twine / hypertext fiction</strong> — non-linear narrative structure as creative and scholarly practice</li>
+      <li><strong>AI-assisted development</strong> — Claude Code, GitHub, distant coding methodology</li>
+      <li><strong>Prompt engineering and LLM behavior analysis</strong> — AI detection experimentation</li>
+    </ul>
+  </section>
+
+  <!-- CREATIVE WORKS -->
+  <section>
+    <h2>Creative Works with Computational Relevance</h2>
+    <ul class="creative-list">
+      <li><strong>Start Here</strong> — memoir in five parts (Slurry, Pavement, Footprint, Detour, Finish Line); computationally analyzed</li>
+      <li><strong>Machine Gospel</strong> — dystopian novel; mandatory childhood machine implants; Disney workplace as body horror setting</li>
+    </ul>
+  </section>
+
+  <!-- TOOLS -->
+  <section>
+    <h2>Technology &amp; Tools</h2>
+
+    <div class="tools-group">
+      <h3>AI &amp; Computational</h3>
+      <ul class="tag-list">
+        <li>Python (NLTK, scikit-learn)</li>
+        <li>Voyant Tools</li>
+        <li>D3.js</li>
+        <li>Twine</li>
+        <li>Claude Code</li>
+        <li>GitHub</li>
+        <li>ChatGPT</li>
+        <li>Perplexity</li>
+        <li>OpenAI</li>
+        <li>Prompt engineering</li>
+        <li>LLM behavior analysis</li>
+        <li>AI detection</li>
+        <li>Distant reading</li>
+        <li>Ternary plot visualization</li>
+        <li>Corpus analysis</li>
+      </ul>
+    </div>
+
+    <div class="tools-group">
+      <h3>Web Development</h3>
+      <ul class="tag-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TEACHING -->
+  <section>
+    <h2>Teaching with DH / AI Relevance</h2>
+
+    <div class="teaching-entry">
+      <h3>English Professor — Valencia College <span>| Aug 2024–Present</span></h3>
+      <ul>
+        <li>Actively integrate AI literacy into composition instruction — helping students engage with algorithms critically and remain in command of intention and interpretation</li>
+      </ul>
+    </div>
+
+    <div class="teaching-entry">
+      <h3>Graduate Teaching Assistant — UCF <span>| Aug 2010–Jun 2011</span></h3>
+      <ul>
+        <li>Maintained online grade book and grading rubrics using Blackboard for capstone seminars</li>
+        <li>Assisted in curriculum development and writing rubric creation</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section>
+    <h2>Published Works</h2>
+    <ul class="pub-list">
+      <li><em>The Intentions and Actions of Future Anthropologists: Examining the Gift of Voice</em> (2011)</li>
+      <li>Vocal Media contributor — Top Story and Challenge winner</li>
+    </ul>
+  </section>
+
+  <!-- METHODOLOGY -->
+  <section>
+    <h2>Methodology Reference</h2>
+    <table class="method-table">
+      <tbody>
+        <tr>
+          <td>corpus analysis</td>
+          <td>Applied to CNF publishing ecosystems (Brevity, The Rumpus, Catapult)</td>
+        </tr>
+        <tr>
+          <td>distant reading</td>
+          <td>Applied to Project Gutenberg texts</td>
+        </tr>
+        <tr>
+          <td>ternary plot analysis</td>
+          <td>Applied to Machine Gospel corpus and Vocal Media contest corpora</td>
+        </tr>
+        <tr>
+          <td>vocabulary field visualization</td>
+          <td>Part of Machine Gospel corpus work</td>
+        </tr>
+        <tr>
+          <td>bag-of-words</td>
+          <td>Used in distant reading work</td>
+        </tr>
+        <tr>
+          <td>network visualization</td>
+          <td>Used in distant reading work</td>
+        </tr>
+        <tr>
+          <td>keyword-in-context concordance</td>
+          <td>Used in distant reading work</td>
+        </tr>
+        <tr>
+          <td>web scraping</td>
+          <td>Used to build CNF publishing ecosystem corpus</td>
+        </tr>
+        <tr>
+          <td>distant coding</td>
+          <td>AI-assisted development methodology; Claude Code, GitHub</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    Generated from master_resume.docx &nbsp;·&nbsp; Nicole (Niki) Patino
+  </footer>
+
+</div>
+</body>
+</html>
