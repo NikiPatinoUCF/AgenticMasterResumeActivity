@@ -1,14 +1,11 @@
-# Editorial Content — Nicole (Niki) Patino
+# Editorial Content — Niki Patino
 *Extracted from master_resume.docx — editorial work, publishing, copy editing, digital humanities, and computational text analysis*
 
 ---
 
 ## CONTACT
 
-- Name: Nicole (Niki) Patino
-- Email (professional/academic): nicolealanna@aol.com
-- Email (freelance/creative): nikipatino777@gmail.com
-- Phone: (315) 491-9436
+- Name: Niki Patino
 - Location: Kissimmee, FL
 - Portfolio: vocal.media/authors/nicky-frankly
 
