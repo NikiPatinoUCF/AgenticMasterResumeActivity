@@ -1,7 +1,7 @@
 /* ============================================================
    Nicole (Niki) Patino — Writing Mentor & Life Coach
-   Audience: coaching clients, writers, mentorship seekers,
-             people navigating transition and creative growth
+   Audience: coaching clients, writers seeking development,
+             people navigating creative or personal transition
    ============================================================ */
 
 /* ── Reset ── */
@@ -16,17 +16,17 @@
   --font-serif: Georgia, "Times New Roman", serif;
   --font-sans:  "Helvetica Neue", Arial, sans-serif;
 
-  /* Colour — warm, grounded, human */
   --ink:        #1c1c1c;
   --mid:        #3d3d3d;
-  --muted:      #636363;
-  --rule:       #d6cfc4;          /* warm rule */
-  --accent:     #3b5e52;          /* deep warm green — rooted, calm, trustworthy */
-  --accent-dim: #eaf1ee;          /* soft wash for highlighted blocks */
-  --bg:         #f8f5f0;          /* warm off-white */
+  --muted:      #6b6560;
+  --rule:       #d9d2c8;
+  --accent:     #3b5e52;       /* deep warm green */
+  --accent-dim: #ebf2ee;       /* soft mint wash */
+  --bg:         #f9f6f1;       /* warm off-white */
   --surface:    #ffffff;
+  --disney:     #1a3a5c;       /* separate navy for Disney section */
+  --disney-dim: #e8edf5;
 
-  /* Layout */
   --max-width:  760px;
   --gutter:     2rem;
 }
@@ -63,7 +63,7 @@ header h1 {
   font-family: var(--font-serif);
   font-size: 2.125rem;
   font-weight: normal;
-  letter-spacing: 0.015em;
+  letter-spacing: 0.01em;
   color: var(--accent);
   line-height: 1.2;
 }
@@ -71,21 +71,19 @@ header h1 {
 header .subtitle {
   font-family: var(--font-sans);
   font-size: 0.8125rem;
-  font-weight: normal;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--muted);
-  margin-top: 0.35rem;
+  margin-top: 0.4rem;
 }
 
-/* ── Contact strip ── */
 .contact-strip {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.3rem 1.5rem;
+  gap: 0.25rem 1.5rem;
   margin-top: 1rem;
   font-family: var(--font-sans);
-  font-size: 0.8125rem;
+  font-size: 0.8rem;
   color: var(--mid);
 }
 
@@ -93,6 +91,7 @@ header .subtitle {
   color: var(--accent);
   text-decoration: none;
   border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
 }
 
 .contact-strip a:hover,
@@ -101,7 +100,7 @@ header .subtitle {
   outline: none;
 }
 
-/* ── Sections ── */
+/* ── Section layout ── */
 section {
   margin-top: 3rem;
 }
@@ -111,18 +110,22 @@ section + section {
   border-top: 1px solid var(--rule);
 }
 
-/* ── Section headings (h2) ── */
 h2 {
   font-family: var(--font-sans);
   font-size: 0.6875rem;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 1.5rem;
 }
 
-/* ── Positioning statements ── */
+/* Disney section gets its own accent color */
+.disney-section h2 {
+  color: var(--disney);
+}
+
+/* ── Positioning statements (About) ── */
 .statements {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -133,11 +136,6 @@ h2 {
   padding: 1rem 1.125rem;
   background: var(--accent-dim);
   border-left: 3px solid var(--accent);
-}
-
-/* Full-width statement variant */
-.statement.full {
-  grid-column: 1 / -1;
 }
 
 .statement h3 {
@@ -180,17 +178,22 @@ h2 {
   font-family: var(--font-sans);
   font-size: 0.8rem;
   color: var(--muted);
-  margin-top: 0.125rem;
+  margin-top: 0.1rem;
 }
 
 .entry-body h4 {
   font-family: var(--font-sans);
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: var(--muted);
   margin: 1rem 0 0.35rem;
+}
+
+/* Disney entries — blue-tinted header line */
+.disney-section .entry-header h3 {
+  color: var(--disney);
 }
 
 /* ── Lists ── */
@@ -205,14 +208,31 @@ ul li {
   color: var(--ink);
 }
 
-/* ── Published & creative works ── */
+/* ── Studio / entrepreneurial items ── */
+.studio-list {
+  list-style: none;
+  padding: 0;
+}
+
+.studio-list li {
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
+
+.studio-list li:last-child {
+  border-bottom: none;
+}
+
+/* ── Published works ── */
 .works-list {
   list-style: none;
   padding: 0;
 }
 
 .works-list li {
-  padding: 0.6rem 0;
+  padding: 0.65rem 0;
   border-bottom: 1px solid var(--rule);
   font-size: 0.9375rem;
   line-height: 1.65;
@@ -234,6 +254,23 @@ ul li {
   outline: none;
 }
 
+/* ── Education ── */
+.edu-list {
+  list-style: none;
+  padding: 0;
+}
+
+.edu-list li {
+  padding: 0.6rem 0;
+  border-bottom: 1px dotted var(--rule);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
+
+.edu-list li:last-child {
+  border-bottom: none;
+}
+
 /* ── Credentials ── */
 .credentials-list {
   list-style: none;
@@ -249,28 +286,10 @@ ul li {
   color: var(--mid);
   background: var(--surface);
   border: 1px solid var(--rule);
-  padding: 0.35rem 0.75rem;
-  margin-bottom: 0;
+  padding: 0.35rem 0.8rem;
 }
 
-/* ── Approach / themes block ── */
-.themes {
-  padding: 1.25rem 1.375rem;
-  background: var(--accent-dim);
-  border-left: 3px solid var(--accent);
-}
-
-.themes ul {
-  padding-left: 1.1rem;
-}
-
-.themes ul li {
-  font-size: 0.9375rem;
-  line-height: 1.7;
-  margin-bottom: 0.3rem;
-}
-
-/* ── Inline emphasis ── */
+/* ── Inline ── */
 em     { font-style: italic; }
 strong { font-weight: bold; }
 
@@ -278,13 +297,12 @@ strong { font-weight: bold; }
 @media (max-width: 700px) {
   :root { --gutter: 1.375rem; }
   .statements { grid-template-columns: 1fr; }
-  .statement.full { grid-column: 1; }
 }
 
 /* ── Responsive — mobile ── */
 @media (max-width: 480px) {
-  header h1 { font-size: 1.625rem; }
-  .page { padding-top: 2.25rem; padding-bottom: 4rem; }
+  header h1  { font-size: 1.625rem; }
+  .page      { padding-top: 2.25rem; padding-bottom: 4rem; }
 }
 
 /* ── Print ── */
@@ -293,40 +311,16 @@ strong { font-weight: bold; }
     --bg:         #ffffff;
     --surface:    #ffffff;
     --accent-dim: #f0f0f0;
+    --disney-dim: #f0f0f0;
     --rule:       #bbbbbb;
   }
 
-  body {
-    font-size: 10pt;
-    line-height: 1.5;
-    background: #fff;
-    color: #000;
-  }
-
-  .page {
-    max-width: 100%;
-    padding: 0;
-  }
-
-  header h1 {
-    color: #000;
-    font-size: 16pt;
-  }
-
+  body { font-size: 10pt; line-height: 1.5; background: #fff; color: #000; }
+  .page { max-width: 100%; padding: 0; }
+  header h1 { color: #000; font-size: 16pt; }
   h2 { color: #000; }
-
-  .statement,
-  .themes {
-    border-left-color: #000;
-    background: none;
-  }
-
-  .contact-strip a,
-  .works-list a {
-    color: #000;
-    border-bottom: none;
-  }
-
+  .statement { border-left-color: #000; background: none; }
+  .contact-strip a, .works-list a { color: #000; border-bottom: none; }
   section + section { page-break-inside: avoid; }
-  .entry            { page-break-inside: avoid; }
+  .entry { page-break-inside: avoid; }
 }
