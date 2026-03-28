@@ -1,0 +1,418 @@
+/* ============================================================
+   Nicole (Niki) Patino — Entrepreneur Profile
+   Audience: investors, collaborators, business partners
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500&display=swap');
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Design tokens ── */
+:root {
+  --navy:        #1a2942;
+  --navy-light:  #243650;
+  --gold:        #a07830;
+  --gold-light:  #c49a50;
+  --gold-tint:   #f7f2ea;
+  --ink:         #1c1c1e;
+  --ink-mid:     #3a3a3c;
+  --ink-muted:   #6e6e73;
+  --border:      #d1d1d6;
+  --border-light:#e8e8e4;
+  --surface:     #f9f8f6;
+  --white:       #ffffff;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+
+  --max-width: 860px;
+  --section-gap: 3.5rem;
+  --entry-gap: 2.25rem;
+}
+
+/* ── Base ── */
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--ink);
+  background: var(--white);
+}
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+a:hover {
+  border-bottom-color: var(--gold-light);
+}
+
+em, cite {
+  font-style: italic;
+}
+
+/* ── Header ── */
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 4rem 2rem 3.5rem;
+  text-align: center;
+  position: relative;
+}
+
+header::after {
+  content: '';
+  display: block;
+  width: 3rem;
+  height: 2px;
+  background: var(--gold);
+  margin: 1.75rem auto 0;
+}
+
+header h1 {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+}
+
+header .subtitle {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* ── Main layout ── */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+}
+
+/* ── Sections ── */
+section {
+  margin-bottom: var(--section-gap);
+}
+
+section + section {
+  border-top: 1px solid var(--border-light);
+  padding-top: var(--section-gap);
+}
+
+/* Section label */
+h2 {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* ── Positioning statements ── */
+.statement {
+  margin-bottom: 2rem;
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--border-light);
+}
+
+.statement:last-child {
+  margin-bottom: 0;
+}
+
+.statement h3 {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+
+.statement p {
+  font-size: 0.975rem;
+  color: var(--ink-mid);
+  line-height: 1.8;
+}
+
+/* ── Experience entries ── */
+.entry {
+  margin-bottom: var(--entry-gap);
+}
+
+.entry:last-child {
+  margin-bottom: 0;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.entry-title {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.entry-date {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--ink-muted);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.entry-sub {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  margin-bottom: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+
+/* Angle label (sub-category within an entry) */
+.entry-angle {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 1rem 0 0.5rem;
+}
+
+/* ── Lists ── */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.35rem;
+  font-size: 0.925rem;
+  color: var(--ink-mid);
+  line-height: 1.7;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 5px;
+  height: 1px;
+  background: var(--gold-light);
+}
+
+/* ── Technology grid ── */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 2rem 2.5rem;
+}
+
+.tech-group h3 {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.tech-group p {
+  font-size: 0.875rem;
+  color: var(--ink-mid);
+  line-height: 1.65;
+}
+
+/* ── Publications ── */
+.pub {
+  margin-bottom: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--surface);
+  border-radius: 3px;
+  border: 1px solid var(--border-light);
+}
+
+.pub:last-child {
+  margin-bottom: 0;
+}
+
+.pub p {
+  font-size: 0.925rem;
+  color: var(--ink-mid);
+  line-height: 1.7;
+}
+
+.pub cite {
+  color: var(--ink);
+  font-weight: 400;
+}
+
+/* ── Notes callout ── */
+.notes {
+  background: var(--gold-tint);
+  border-left: 3px solid var(--gold);
+  padding: 1.5rem 1.75rem;
+  border-radius: 0 3px 3px 0;
+}
+
+.notes ul li {
+  margin-bottom: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--ink-mid);
+}
+
+.notes ul li::before {
+  background: var(--gold);
+}
+
+.notes ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Footer ── */
+footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.75rem 2rem 3rem;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+footer p {
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.03em;
+}
+
+footer .footer-source {
+  font-size: 0.7rem;
+  color: var(--border);
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  header {
+    padding: 3rem 1.5rem 2.75rem;
+  }
+
+  header h1 {
+    font-size: 1.75rem;
+  }
+
+  main {
+    padding: 2.5rem 1.25rem 4rem;
+  }
+
+  .entry-header {
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .entry-date {
+    font-size: 0.75rem;
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem 1.25rem 2.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Print ── */
+@media print {
+  body {
+    font-size: 11pt;
+    background: white;
+    color: #000;
+  }
+
+  header {
+    background: #000;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    padding: 2rem;
+  }
+
+  main {
+    padding: 2rem 0;
+  }
+
+  section + section {
+    padding-top: 2rem;
+  }
+
+  section {
+    margin-bottom: 2rem;
+    page-break-inside: avoid;
+  }
+
+  .entry {
+    page-break-inside: avoid;
+  }
+
+  .notes {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  a {
+    color: #000;
+    border-bottom: none;
+  }
+
+  footer {
+    padding: 1rem 0;
+  }
+}
