@@ -1,0 +1,120 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background: #fff;
+  color: #1a1a1a;
+  line-height: 1.7;
+  padding: 4rem 1.5rem 5rem;
+}
+
+main {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* ── Header ── */
+
+header {
+  margin-bottom: 2.75rem;
+}
+
+h1 {
+  font-size: 1.25rem;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+}
+
+/* ── Intro ── */
+
+.intro {
+  margin-bottom: 3rem;
+}
+
+.intro p {
+  margin-bottom: 1em;
+}
+
+.intro p:last-child {
+  margin-bottom: 0;
+}
+
+.intro .lede {
+  font-style: italic;
+}
+
+/* ── Divider ── */
+
+hr {
+  border: none;
+  border-top: 1px solid #d0d0d0;
+  margin: 0 0 2.75rem;
+}
+
+/* ── Index ── */
+
+.index {
+  margin-bottom: 3.5rem;
+}
+
+.index ul {
+  list-style: none;
+}
+
+.index li {
+  margin-bottom: 1.75rem;
+}
+
+.index li:last-child {
+  margin-bottom: 0;
+}
+
+.index a {
+  display: block;
+  font-size: 1rem;
+  color: #1a1a1a;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: #999;
+  margin-bottom: 0.2em;
+}
+
+.index a:hover {
+  text-decoration-color: #1a1a1a;
+}
+
+.index a:visited {
+  color: #1a1a1a;
+}
+
+.audience {
+  display: block;
+  font-size: 0.82rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* ── Footer ── */
+
+footer {
+  font-size: 0.8rem;
+  color: #999;
+  line-height: 1.6;
+}
+
+footer a {
+  color: #999;
+}
+
+footer a:hover {
+  color: #1a1a1a;
+}
