@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicole (Niki) Patino — Teaching, Composition & ESOL</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #fafafa;
+    }
+
+    a { color: inherit; }
+
+    /* Layout */
+    header {
+      background: #1a1a2e;
+      color: #f0f0f0;
+      padding: 3rem 2rem 2.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: normal;
+      letter-spacing: 0.04em;
+    }
+
+    header .subtitle {
+      margin-top: 0.4rem;
+      font-size: 0.95rem;
+      color: #a8b0c0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    header .contact {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #c8cdd8;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2rem 4rem;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 3rem;
+    }
+
+    section + section {
+      border-top: 1px solid #ddd;
+      padding-top: 2.5rem;
+    }
+
+    .section-label {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 1.2rem;
+    }
+
+    /* Summary cards */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    @media (max-width: 600px) {
+      .summary-grid { grid-template-columns: 1fr; }
+    }
+
+    .summary-card {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-left: 3px solid #1a1a2e;
+      padding: 1.25rem 1.4rem;
+    }
+
+    .summary-card h3 {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 0.6rem;
+    }
+
+    .summary-card p {
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    /* Experience entries */
+    .entry {
+      margin-bottom: 2.25rem;
+    }
+
+    .entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .entry-title {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1a1a2e;
+    }
+
+    .entry-dates {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.82rem;
+      color: #777;
+      white-space: nowrap;
+    }
+
+    .entry-meta {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.82rem;
+      color: #888;
+      margin-bottom: 0.75rem;
+    }
+
+    .entry-group-label {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #999;
+      margin: 0.9rem 0 0.35rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      font-size: 0.95rem;
+      color: #333;
+      margin-bottom: 0.3rem;
+    }
+
+    /* Education */
+    .edu-entry {
+      margin-bottom: 1.25rem;
+    }
+
+    .edu-entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .edu-degree {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #1a1a2e;
+    }
+
+    .edu-meta {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.82rem;
+      color: #777;
+      margin-bottom: 0.3rem;
+    }
+
+    .edu-entry ul {
+      margin-top: 0.25rem;
+    }
+
+    /* Credentials & Tools */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .two-col { grid-template-columns: 1fr; }
+    }
+
+    .tool-group h3 {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 0.5rem;
+    }
+
+    .tool-group p {
+      font-size: 0.92rem;
+      color: #333;
+    }
+
+    /* Credentials list */
+    .cred-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .cred-list li {
+      font-size: 0.95rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #eee;
+      color: #333;
+    }
+
+    .cred-list li:last-child {
+      border-bottom: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.78rem;
+      color: #bbb;
+      border-top: 1px solid #e8e8e8;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Nicole (Niki) Patino</h1>
+  <p class="subtitle">Teaching &nbsp;·&nbsp; Composition Pedagogy &nbsp;·&nbsp; ESOL</p>
+  <p class="contact">Kissimmee, FL &nbsp;·&nbsp; nicolealanna@aol.com &nbsp;·&nbsp; (315) 491-9436</p>
+</header>
+
+<main>
+
+  <!-- Profile -->
+  <section>
+    <p class="section-label">Profile</p>
+    <div class="summary-grid">
+      <div class="summary-card">
+        <h3>Teaching &amp; Composition</h3>
+        <p>Multidisciplinary educator with 5+ years teaching English composition, writing, and literature online and in-person to students ages 4–adult. Student-centered approach grounded in clear communication, cultural sensitivity, and real-world applications of writing. Florida DOE Statement of Eligibility. 120-hour TEFL certified.</p>
+      </div>
+      <div class="summary-card">
+        <h3>Writing Mentor &amp; Coach</h3>
+        <p>Experienced writing mentor and editor with a track record of guiding students through high-stakes writing — college admissions essays, SOPs, scholarship applications, research papers — while maintaining authentic voice. Skilled in 1:1 Zoom coaching, structured revision cycles, and ESL support.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section>
+    <p class="section-label">Professional Experience</p>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Valencia College — English Professor</span>
+        <span class="entry-dates">Aug 2024–Present</span>
+      </div>
+      <p class="entry-meta">Osceola Campus, Kissimmee, FL</p>
+      <ul>
+        <li>Develop and deliver ENC 1101/1102 curriculum across all modalities (face-to-face, online, mixed-mode)</li>
+        <li>Provide individualized, rubric-based feedback throughout the writing process</li>
+        <li>Incorporate institutional learning outcomes and essential competencies into assignments</li>
+        <li>Design writing curriculum emphasizing tone, clarity, critical thinking, and real-world documentation practices</li>
+        <li>Mentor diverse students 1:1 through thesis-driven research, writing, and revision processes</li>
+        <li>Actively integrate AI literacy into composition instruction — helping students engage with algorithms critically and remain in command of intention and interpretation</li>
+        <li>Guide students through writing and research processes, building critical analysis and editorial skills</li>
+        <li>Function as editorial partner through the full writing process, emphasizing grammar, style, and audience awareness</li>
+      </ul>
+      <p class="entry-group-label">Institutional Service</p>
+      <ul>
+        <li>Serve on The Valencia Scholar editorial board — workflow development, layout production (Canva Pro, InDesign), style standardization, and long-term journal infrastructure for the college's inaugural student publication</li>
+        <li>Collaborated with Writing Center faculty to develop a resource-awareness activity for student use</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">MegaPrep Academy — AP English Tutor</span>
+        <span class="entry-dates">Jun 2025–Present</span>
+      </div>
+      <p class="entry-meta">Remote</p>
+      <ul>
+        <li>Develop targeted lessons on literary analysis, essay structure, and rhetorical strategies for AP students</li>
+        <li>Provide individualized feedback aligned with college-level writing and editorial standards</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Simple Tense Education — Writing Coach</span>
+        <span class="entry-dates">Feb 2022–Aug 2024</span>
+      </div>
+      <p class="entry-meta">Remote</p>
+      <ul>
+        <li>Coached high school and college students through research essays, SOPs, and critical analyses</li>
+        <li>Guided students through revisions, developing voice and argumentation</li>
+        <li>Adhered to MLA, APA, CMS, and Harvard formats across a vast range of disciplines</li>
+        <li>Supported multilingual students in aligning with institutional standards for citations and tone</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Freelance — Writing Coach &amp; Copy Editor</span>
+        <span class="entry-dates">Nov 2019–Present</span>
+      </div>
+      <p class="entry-meta">Remote</p>
+      <ul>
+        <li>Guide students through Common App personal statements, scholarship essays, and graduate SOPs</li>
+        <li>Lead 1:1 coaching sessions via Zoom centering on storytelling, structure, and authentic voice</li>
+        <li>Edit 100+ academic manuscripts, personal statements, and resumes — often for multilingual clients</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Wordvice — Editor (ESL / Multilingual Focus)</span>
+        <span class="entry-dates">Jan 2022–Present</span>
+      </div>
+      <p class="entry-meta">Remote</p>
+      <ul>
+        <li>Give detailed guidance to non-native English speakers, preserving voice and boosting accessibility and accuracy</li>
+        <li>Edit 20+ academic and scientific manuscripts monthly for international researchers</li>
+        <li>Requested by repeat clients for empathetic editing style and ability to bring structure to complex drafts</li>
+        <li>Edit hundreds of personal statements, SOPs, and CVs for international clients applying to US/UK institutions</li>
+        <li>Ensure adherence to word count and prompts, enhancing grammar, clarity, and persuasive tone</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">QKids / VIPKids / Native Camp — English Teacher</span>
+        <span class="entry-dates">May 2019–Present</span>
+      </div>
+      <p class="entry-meta">Remote</p>
+      <ul>
+        <li>Teach online English classes to students ages 3–adult using game-based, pre-made curriculum</li>
+        <li>Reflect on student performance and provide feedback along given dimensions</li>
+        <li>Host open forum chat sessions to improve English fluency, pronunciation, and mechanics</li>
+        <li>Hold 120-hour TEFL certification and Statement of Eligibility from the Florida DOE</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">UCF — Graduate Teaching Assistant</span>
+        <span class="entry-dates">Aug 2010–Jun 2011</span>
+      </div>
+      <p class="entry-meta">Office of Interdisciplinary Studies, Orlando, FL</p>
+      <ul>
+        <li>Maintained online grade book and grading rubrics using Blackboard for capstone seminars</li>
+        <li>Read, evaluated, graded, and gave feedback on student work</li>
+        <li>Assisted in curriculum development and writing rubric creation</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section>
+    <p class="section-label">Education</p>
+
+    <div class="edu-entry">
+      <p class="edu-degree">PhD Candidate — Texts &amp; Technology</p>
+      <p class="edu-meta">University of Central Florida &nbsp;·&nbsp; In Progress</p>
+      <ul>
+        <li>Specialization: Editing, Publishing &amp; Interdisciplinary Curating (EPIC)</li>
+        <li>Research: digital publishing platforms, CNF narrative structure, computational text analysis, AI and authorial agency</li>
+        <li>Coursework: Humanities in the AI Age (Dr. Anastasia Salter)</li>
+      </ul>
+    </div>
+
+    <div class="edu-entry">
+      <p class="edu-degree">Master of Fine Arts — Creative Nonfiction</p>
+      <p class="edu-meta">Bay Path University &nbsp;·&nbsp; 2019–2021 &nbsp;·&nbsp; GPA 3.98</p>
+      <ul>
+        <li>Publishing track focus; thesis in long-form narrative nonfiction memoir</li>
+      </ul>
+    </div>
+
+    <div class="edu-entry">
+      <p class="edu-degree">MA — Interdisciplinary Studies / Cognitive Science Certificate</p>
+      <p class="edu-meta">University of Central Florida &nbsp;·&nbsp; 2009–2011 &nbsp;·&nbsp; GPA 3.98</p>
+      <ul>
+        <li>Applied Anthropology and Cognitive Science; qualitative research; final ethnography</li>
+        <li>Recipient of Provost's Fellowship; Graduate Teaching Assistant</li>
+      </ul>
+    </div>
+
+    <div class="edu-entry">
+      <p class="edu-degree">Graduate Certificate — Digital Humanities in the Age of AI</p>
+      <p class="edu-meta">University of Central Florida &nbsp;·&nbsp; 2025</p>
+    </div>
+  </section>
+
+  <!-- Credentials & Tools -->
+  <section>
+    <p class="section-label">Credentials &amp; Tools</p>
+    <div class="two-col">
+
+      <div>
+        <div class="tool-group" style="margin-bottom:1.5rem;">
+          <h3>Certifications</h3>
+          <ul class="cred-list">
+            <li>120-hour TEFL Certification</li>
+            <li>Statement of Eligibility — Florida Department of Education</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <div class="tool-group" style="margin-bottom:1rem;">
+          <h3>LMS &amp; Collaboration</h3>
+          <p>Canvas, Blackboard, Zoom, Skype, Google Workspace, Acuity</p>
+        </div>
+        <div class="tool-group">
+          <h3>Style Guides</h3>
+          <p>AP, Chicago Manual of Style, APA, MLA, Harvard, house style guides — fluent across all</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>Nicole (Niki) Patino &nbsp;·&nbsp; Teaching Portfolio &nbsp;·&nbsp; Kissimmee, FL</footer>
+
+</body>
+</html>
