@@ -5,7 +5,7 @@
 ## Identity / Positioning
 
 ### Academic / PhD Statement
-PhD Candidate in Texts & Technology at UCF (EPIC: Editing, Publishing & Interdisciplinary Curating). MFA in Creative Nonfiction. Research focus: how digital publishing platforms shape narrative structure in CNF; computational text analysis; born-digital work; AI and authorial agency.
+PhD Student in Texts & Technology at UCF (EPIC: Editing, Publishing & Interdisciplinary Curating). MFA in Creative Nonfiction. Research focus: how digital publishing platforms shape narrative structure in CNF; computational text analysis; born-digital work; AI and authorial agency.
 
 ### Language Analyst / AI-ML Statement
 Detail-focused content specialist with experience reviewing language-based materials for clarity, logic, and grammatical precision. Native US English fluency. High-volume editing in deadline-driven remote environments. Experience with generative AI tools, LLM behavior analysis, and prompt engineering.
@@ -14,7 +14,7 @@ Detail-focused content specialist with experience reviewing language-based mater
 
 ## Education
 
-### PhD Candidate — Texts & Technology | University of Central Florida | In Progress
+### PhD Student — Texts & Technology | University of Central Florida | In Progress
 - Specialization: Editing, Publishing & Interdisciplinary Curating (EPIC)
 - Research: digital publishing platforms, CNF narrative structure, computational text analysis, AI and authorial agency
 - Coursework: Humanities in the AI Age (Dr. Anastasia Salter)
