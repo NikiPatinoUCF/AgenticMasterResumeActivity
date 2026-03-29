@@ -103,7 +103,7 @@ Office of Interdisciplinary Studies, Orlando, FL
 
 ## EDUCATION (Relevant)
 
-- **PhD Candidate — Texts & Technology** | University of Central Florida | In Progress
+- **PhD student — Texts & Technology** | University of Central Florida | In Progress
   - Specialization: Editing, Publishing & Interdisciplinary Curating (EPIC)
   - Research: digital publishing platforms, CNF narrative structure, computational text analysis, AI and authorial agency
   - Coursework: Humanities in the AI Age (Dr. Anastasia Salter)
