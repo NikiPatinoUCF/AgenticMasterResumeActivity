@@ -1,6 +1,6 @@
 /* ============================================================
-   Nicole (Niki) Patino — Editorial & Digital Humanities
-   Audience: editors, publishers, digital humanities collaborators
+   Nicole (Niki) Patino — Editorial & Publishing
+   Theme: minimalist black and gold
    ============================================================ */
 
 /* ── Reset ── */
@@ -10,24 +10,17 @@
   padding: 0;
 }
 
-/* ── Design tokens ── */
+/* ── Tokens ── */
 :root {
-  /* Typography */
-  --font-serif: Georgia, "Times New Roman", serif;
-  --font-sans: "Helvetica Neue", Arial, sans-serif;
-
-  /* Colour */
-  --ink:        #1c1c1c;
-  --mid:        #3d3d3d;
-  --muted:      #636363;
-  --rule:       #d4d0c8;        /* warm rule — echoes aged paper */
-  --accent:     #2c4a7c;        /* deep editorial navy */
-  --accent-dim: #e8edf5;        /* tinted wash for statements */
-  --bg:         #f7f5f0;        /* warm off-white — book-paper feel */
-  --surface:    #ffffff;
-
-  /* Layout */
-  --max-width:  760px;
+  --bg:         #0c0c0c;
+  --surface:    #131313;
+  --gold:       #c4973e;
+  --gold-light: #e2c06a;
+  --gold-dim:   #5c4418;
+  --text:       #d8d4cb;
+  --text-muted: #706c64;
+  --rule:       #1e1e1e;
+  --max-w:      760px;
   --gutter:     2rem;
 }
 
@@ -38,87 +31,80 @@ html {
 }
 
 body {
-  font-family: var(--font-serif);
+  font-family: Georgia, 'Times New Roman', serif;
   font-size: 1rem;
   line-height: 1.75;
-  color: var(--ink);
-  background-color: var(--bg);
+  color: var(--text);
+  background: var(--bg);
 }
 
 /* ── Page wrapper ── */
 .page {
-  max-width: var(--max-width);
+  max-width: var(--max-w);
   margin: 0 auto;
   padding: 3.5rem var(--gutter) 6rem;
 }
 
 /* ── Header ── */
 header {
-  padding-bottom: 1.75rem;
+  padding-bottom: 2rem;
   margin-bottom: 0.25rem;
-  border-bottom: 2px solid var(--accent);
+  border-bottom: 1px solid var(--gold-dim);
 }
 
 header h1 {
-  font-family: var(--font-serif);
   font-size: 2.125rem;
   font-weight: normal;
   letter-spacing: 0.015em;
-  color: var(--accent);
+  color: var(--gold-light);
   line-height: 1.2;
 }
 
 header .subtitle {
-  font-family: var(--font-sans);
-  font-size: 0.8125rem;
-  font-weight: normal;
-  letter-spacing: 0.1em;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--muted);
-  margin-top: 0.35rem;
+  color: var(--text-muted);
+  margin-top: 0.4rem;
 }
 
 /* ── Contact strip ── */
 .contact-strip {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.3rem 1.5rem;
+  gap: 0.25rem 1.375rem;
   margin-top: 1rem;
-  font-family: var(--font-sans);
-  font-size: 0.8125rem;
-  color: var(--mid);
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.8rem;
+  color: var(--text-muted);
 }
 
 .contact-strip a {
-  color: var(--accent);
+  color: var(--gold);
   text-decoration: none;
   border-bottom: 1px solid transparent;
 }
 
-.contact-strip a:hover,
-.contact-strip a:focus {
-  border-bottom-color: var(--accent);
-  outline: none;
+.contact-strip a:hover {
+  border-bottom-color: var(--gold);
 }
 
 /* ── Sections ── */
 section {
   margin-top: 3rem;
-}
-
-section + section {
   padding-top: 2.75rem;
   border-top: 1px solid var(--rule);
 }
 
-/* ── Section headings (h2) ── */
+/* ── Section headings ── */
 h2 {
-  font-family: var(--font-sans);
-  font-size: 0.6875rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.625rem;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--gold);
   margin-bottom: 1.5rem;
 }
 
@@ -126,29 +112,31 @@ h2 {
 .statements {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap: 1px;
+  background: var(--rule);
+  outline: 1px solid var(--rule);
 }
 
 .statement {
+  background: var(--surface);
   padding: 1rem 1.125rem;
-  background: var(--accent-dim);
-  border-left: 3px solid var(--accent);
+  border-left: 2px solid var(--gold-dim);
 }
 
 .statement h3 {
-  font-family: var(--font-sans);
-  font-size: 0.7rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.625rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--gold);
   margin-bottom: 0.45rem;
 }
 
 .statement p {
   font-size: 0.875rem;
   line-height: 1.65;
-  color: var(--ink);
+  color: var(--text);
 }
 
 /* ── Experience entries ── */
@@ -165,26 +153,27 @@ h2 {
 }
 
 .entry-header h3 {
-  font-family: var(--font-serif);
+  font-family: Georgia, serif;
   font-size: 1rem;
   font-weight: bold;
-  color: var(--ink);
+  color: var(--text);
 }
 
 .entry-header .meta {
-  font-family: var(--font-sans);
-  font-size: 0.8rem;
-  color: var(--muted);
-  margin-top: 0.125rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.79rem;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
 }
 
 .entry-body h4 {
-  font-family: var(--font-sans);
-  font-size: 0.7rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.625rem;
   font-weight: 700;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--gold-dim);
+  filter: brightness(1.6);
   margin: 1rem 0 0.35rem;
 }
 
@@ -197,14 +186,14 @@ ul li {
   font-size: 0.9375rem;
   line-height: 1.7;
   margin-bottom: 0.3rem;
-  color: var(--ink);
+  color: var(--text);
 }
 
 /* ── Education ── */
 .edu-item {
   margin-bottom: 1.375rem;
   padding-bottom: 1.375rem;
-  border-bottom: 1px dotted var(--rule);
+  border-bottom: 1px solid var(--rule);
 }
 
 .edu-item:last-child {
@@ -214,18 +203,17 @@ ul li {
 }
 
 .edu-item .degree {
-  font-family: var(--font-serif);
   font-size: 0.9375rem;
   font-weight: bold;
+  color: var(--text);
   line-height: 1.5;
-  color: var(--ink);
 }
 
 .edu-item ul {
   margin-top: 0.375rem;
 }
 
-/* ── Published works & works in progress ── */
+/* ── Published & works lists ── */
 .works-list {
   list-style: none;
   padding: 0;
@@ -243,18 +231,16 @@ ul li {
 }
 
 .works-list a {
-  color: var(--accent);
+  color: var(--gold);
   text-decoration: none;
   border-bottom: 1px solid transparent;
 }
 
-.works-list a:hover,
-.works-list a:focus {
-  border-bottom-color: var(--accent);
-  outline: none;
+.works-list a:hover {
+  border-bottom-color: var(--gold);
 }
 
-/* ── DH projects list ── */
+/* ── DH projects ── */
 .projects-list {
   padding-left: 1.2rem;
 }
@@ -263,7 +249,6 @@ ul li {
   font-size: 0.9375rem;
   line-height: 1.7;
   margin-bottom: 0.5rem;
-  color: var(--ink);
 }
 
 /* ── Tools grid ── */
@@ -271,8 +256,8 @@ ul li {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
-  border: 1px solid var(--rule);
-  background-color: var(--rule);   /* gap colour via background trick */
+  background: var(--rule);
+  outline: 1px solid var(--rule);
 }
 
 .tool-group {
@@ -281,116 +266,51 @@ ul li {
 }
 
 .tool-group h4 {
-  font-family: var(--font-sans);
-  font-size: 0.675rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.625rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--gold);
   margin-bottom: 0.45rem;
 }
 
 .tool-group p {
-  font-family: var(--font-sans);
-  font-size: 0.8125rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.8rem;
   line-height: 1.55;
-  color: var(--mid);
+  color: var(--text-muted);
 }
 
-/* ── Inline emphasis ── */
-em {
-  font-style: italic;
-}
-
-strong {
-  font-weight: bold;
-}
+/* ── Inline ── */
+em     { font-style: italic; }
+strong { font-weight: bold; }
 
 /* ── Responsive — tablet ── */
-@media (max-width: 700px) {
-  :root {
-    --gutter: 1.375rem;
-  }
+@media (max-width: 680px) {
+  :root { --gutter: 1.375rem; }
 
-  .statements {
-    grid-template-columns: 1fr;
-  }
-
-  .tools-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+  .statements { grid-template-columns: 1fr; }
+  .tools-grid { grid-template-columns: 1fr 1fr; }
 }
 
 /* ── Responsive — mobile ── */
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.625rem;
-  }
-
-  .tools-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .page {
-    padding-top: 2.25rem;
-    padding-bottom: 4rem;
-  }
+@media (max-width: 440px) {
+  header h1 { font-size: 1.625rem; }
+  .tools-grid { grid-template-columns: 1fr; }
+  .page { padding-top: 2.25rem; padding-bottom: 4rem; }
 }
 
 /* ── Print ── */
 @media print {
-  :root {
-    --bg:        #ffffff;
-    --surface:   #ffffff;
-    --accent-dim: #f0f0f0;
-    --rule:      #bbbbbb;
-  }
-
-  body {
-    font-size: 10pt;
-    line-height: 1.5;
-    background: #fff;
-    color: #000;
-  }
-
-  .page {
-    max-width: 100%;
-    padding: 0;
-  }
-
-  header h1 {
-    color: #000;
-    font-size: 16pt;
-  }
-
-  h2 {
-    color: #000;
-  }
-
-  .statement {
-    border-left-color: #000;
-    background: none;
-  }
-
-  .tool-group {
-    background: none;
-  }
-
-  .tools-grid {
-    background-color: #ccc;
-  }
-
-  .contact-strip a,
-  .works-list a {
-    color: #000;
-    border-bottom: none;
-  }
-
-  section + section {
-    page-break-inside: avoid;
-  }
-
-  .entry {
-    page-break-inside: avoid;
-  }
+  body { background: #fff; color: #000; font-size: 10pt; line-height: 1.5; }
+  .page { max-width: 100%; padding: 0; }
+  header h1 { color: #000; font-size: 16pt; }
+  h2 { color: #000; }
+  .statement { background: none; border-left-color: #000; }
+  .tool-group { background: none; }
+  .tools-grid, .statements { background: #ccc; }
+  .works-list a { color: #000; border-bottom: none; }
+  section { page-break-inside: avoid; }
+  .entry { page-break-inside: avoid; }
 }
