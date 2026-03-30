@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 306" role="img" aria-label="Career timeline — Niki Patino">
+  <title>Career Timeline — Niki Patino</title>
+
+  <!-- Background -->
+  <rect width="700" height="306" fill="#ffffff"/>
+
+  <!-- Year guide lines -->
+  <line x1="160" y1="30" x2="160" y2="295" stroke="#f0f0f0" stroke-width="1"/>
+  <line x1="260" y1="30" x2="260" y2="295" stroke="#f0f0f0" stroke-width="1"/>
+  <line x1="360" y1="30" x2="360" y2="295" stroke="#f0f0f0" stroke-width="1"/>
+  <line x1="460" y1="30" x2="460" y2="295" stroke="#f0f0f0" stroke-width="1"/>
+  <line x1="560" y1="30" x2="560" y2="295" stroke="#f0f0f0" stroke-width="1"/>
+  <line x1="660" y1="30" x2="660" y2="295" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Present dashed line -->
+  <line x1="680" y1="30" x2="680" y2="295" stroke="#cccccc" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Year labels -->
+  <text x="160" y="25" text-anchor="middle" font-size="9" fill="#bbbbbb" font-family="Helvetica, Arial, sans-serif">2000</text>
+  <text x="260" y="25" text-anchor="middle" font-size="9" fill="#bbbbbb" font-family="Helvetica, Arial, sans-serif">2005</text>
+  <text x="360" y="25" text-anchor="middle" font-size="9" fill="#bbbbbb" font-family="Helvetica, Arial, sans-serif">2010</text>
+  <text x="460" y="25" text-anchor="middle" font-size="9" fill="#bbbbbb" font-family="Helvetica, Arial, sans-serif">2015</text>
+  <text x="560" y="25" text-anchor="middle" font-size="9" fill="#bbbbbb" font-family="Helvetica, Arial, sans-serif">2020</text>
+  <text x="660" y="25" text-anchor="middle" font-size="9" fill="#bbbbbb" font-family="Helvetica, Arial, sans-serif">2025</text>
+  <text x="682" y="25" text-anchor="start"  font-size="8"  fill="#bbbbbb" font-family="Helvetica, Arial, sans-serif">now</text>
+
+  <!-- Baseline ruler -->
+  <line x1="120" y1="30" x2="680" y2="30" stroke="#eeeeee" stroke-width="1"/>
+
+
+  <!-- ══════════════════════════════════════════
+       ROW 1 — Wildlife &amp; Science   #527a56
+       Sub-row A y=55  Sub-row B y=75
+       ══════════════════════════════════════════ -->
+
+  <text x="116" y="68" text-anchor="end" font-size="9" fill="#527a56" font-family="Georgia, 'Times New Roman', serif">Wildlife &amp;</text>
+  <text x="116" y="80" text-anchor="end" font-size="9" fill="#527a56" font-family="Georgia, 'Times New Roman', serif">Science</text>
+
+  <!-- Rosamond Gifford Zoo 2003–2006  x=220 w=60 -->
+  <rect x="220" y="55" width="60" height="16" rx="3" fill="#527a56" opacity="0.72">
+    <title>Rosamond Gifford Zoo — Zookeeper: 2003–2006</title>
+  </rect>
+  <text x="223" y="66" font-size="7.5" fill="white" font-family="Helvetica, Arial, sans-serif">Gifford Zoo</text>
+
+  <!-- Disney's Animal Kingdom 2006–2010  x=280 w=80 -->
+  <rect x="280" y="55" width="80" height="16" rx="3" fill="#527a56">
+    <title>Disney's Animal Kingdom — Zookeeper: 2006–2010</title>
+  </rect>
+  <text x="283" y="66" font-size="7.5" fill="white" font-family="Helvetica, Arial, sans-serif">Animal Kingdom</text>
+
+  <!-- ENCO Environmental Lab 2007–2014  x=300 w=140 -->
+  <rect x="300" y="75" width="140" height="16" rx="3" fill="#527a56" opacity="0.60">
+    <title>ENCO Environmental Conservation Labs — Analyst / QA: 2007–2014</title>
+  </rect>
+  <text x="303" y="86" font-size="7.5" fill="white" font-family="Helvetica, Arial, sans-serif">Env. Lab Science (ENCO)</text>
+
+  <line x1="120" y1="100" x2="680" y2="100" stroke="#f2f2f2" stroke-width="1"/>
+
+
+  <!-- ══════════════════════════════════════════
+       ROW 2 — Disney Cast Leadership  #6b4685
+       y=107
+       ══════════════════════════════════════════ -->
+
+  <text x="116" y="116" text-anchor="end" font-size="9" fill="#6b4685" font-family="Georgia, 'Times New Roman', serif">Disney</text>
+  <text x="116" y="127" text-anchor="end" font-size="9" fill="#6b4685" font-family="Georgia, 'Times New Roman', serif">Cast</text>
+
+  <!-- Bibbidi Bobbidi Boutique 2019–present  x=540 w=140 -->
+  <rect x="540" y="107" width="140" height="16" rx="3" fill="#6b4685">
+    <title>Walt Disney World — Relief Coordinator / Trainer, Bibbidi Bobbidi Boutique: 2019–present</title>
+  </rect>
+  <text x="543" y="118" font-size="7.5" fill="white" font-family="Helvetica, Arial, sans-serif">Bibbidi Bobbidi Boutique</text>
+
+  <line x1="120" y1="132" x2="680" y2="132" stroke="#f2f2f2" stroke-width="1"/>
+
+
+  <!-- ══════════════════════════════════════════
+       ROW 3 — Graduate Studies        #3a5a8a
+       y=139
+       ══════════════════════════════════════════ -->
+
+  <text x="116" y="148" text-anchor="end" font-size="9" fill="#3a5a8a" font-family="Georgia, 'Times New Roman', serif">Graduate</text>
+  <text x="116" y="159" text-anchor="end" font-size="9" fill="#3a5a8a" font-family="Georgia, 'Times New Roman', serif">Studies</text>
+
+  <!-- SUNY ESF Wildlife BS 2000–2003  x=160 w=60 -->
+  <rect x="160" y="139" width="60" height="16" rx="3" fill="#3a5a8a" opacity="0.80">
+    <title>SUNY ESF — BS Wildlife Biology: 2000–2003</title>
+  </rect>
+  <text x="163" y="150" font-size="7.5" fill="white" font-family="Helvetica, Arial, sans-serif">Wildlife BS</text>
+
+  <!-- UCF MA 2009–2011  x=340 w=40 -->
+  <rect x="340" y="139" width="40" height="16" rx="3" fill="#3a5a8a">
+    <title>UCF — MA Interdisciplinary Studies / Cognitive Science Certificate: 2009–2011</title>
+  </rect>
+  <text x="343" y="150" font-size="7.5" fill="white" font-family="Helvetica, Arial, sans-serif">UCF MA</text>
+
+  <!-- Bay Path MFA 2019–2021  x=540 w=40 -->
+  <rect x="540" y="139" width="40" height="16" rx="3" fill="#3a5a8a">
+    <title>Bay Path University — MFA Creative Nonfiction: 2019–2021</title>
+  </rect>
+  <text x="543" y="150" font-size="7.5" fill="white" font-family="Helvetica, Arial, sans-serif">MFA</text>
+
+  <!-- UCF PhD 2023–present  x=620 w=60 -->
+  <rect x="620" y="139" width="60" height="16" rx="3" fill="#3a5a8a">
+    <title>UCF — PhD student, Texts &amp; Technology: 2023–present</title>
+  </rect>
+  <text x="623" y="150" font-size="7.5" fill="white" font-family="Helvetica, Arial, sans-serif">PhD T&amp;T</text>
+
+  <line x1="120" y1="164" x2="680" y2="164" stroke="#f2f2f2" stroke-width="1"/>
+
+
+  <!-- ══════════════════════════════════════════
+       ROW 4 — Writing &amp; Editorial  #7a4e2d
+       Sub-row A y=171  Sub-row B y=191
+       ══════════════════════════════════════════ -->
+
+  <text x="116" y="182" text-anchor="end" font-size="9" fill="#7a4e2d" font-family="Georgia, 'Times New Roman', serif">Writing &amp;</text>
+  <text x="116" y="193" text-anchor="end" font-size="9" fill="#7a4e2d" font-family="Georgia, 'Times New Roman', serif">Editorial</text>
+
+  <!-- Freelance 2019–present  x=540 w=140 -->
+  <rect x="540" y="171" width="140" height="16" rx="3" fill="#7a4e2d">
+    <title>Freelance — Copy Editor, Writing Coach &amp; Author: 2019–present</title>
+  </rect>
+  <text x="543" y="182" font-size="7.5" fill="white" font-family="Helvetica, Arial, sans-serif">Freelance Writing &amp; Editing</text>
+
+  <!-- Wordvice 2022–present  x=600 w=80 -->
+  <rect x="600" y="191" width="80" height="16" rx="3" fill="#7a4e2d" opacity="0.72">
+    <title>Wordvice — Editor (ESL / Multilingual Focus): 2022–present</title>
+  </rect>
+  <text x="603" y="202" font-size="7.5" fill="white" font-family="Helvetica, Arial, sans-serif">Wordvice</text>
+
+  <line x1="120" y1="216" x2="680" y2="216" stroke="#f2f2f2" stroke-width="1"/>
+
+
+  <!-- ══════════════════════════════════════════
+       ROW 5 — Teaching &amp; Coaching  #2e6b6b
+       Sub-row A y=223  Sub-row B y=243
+       ══════════════════════════════════════════ -->
+
+  <text x="116" y="234" text-anchor="end" font-size="9" fill="#2e6b6b" font-family="Georgia, 'Times New Roman', serif">Teaching &amp;</text>
+  <text x="116" y="245" text-anchor="end" font-size="9" fill="#2e6b6b" font-family="Georgia, 'Times New Roman', serif">Coaching</text>
+
+  <!-- UCF GTA 2010–2011  x=360 w=20 (narrow, no text) -->
+  <rect x="360" y="223" width="20" height="16" rx="3" fill="#2e6b6b" opacity="0.55">
+    <title>UCF — Graduate Teaching Assistant: 2010–2011</title>
+  </rect>
+
+  <!-- LaFayette Dance Fitness 2015–2019  x=460 w=80 -->
+  <rect x="460" y="223" width="80" height="16" rx="3" fill="#2e6b6b" opacity="0.72">
+    <title>LaFayette School District — Dance Fitness Instructor: 2015–2019</title>
+  </rect>
+  <text x="463" y="234" font-size="7.5" fill="white" font-family="Helvetica, Arial, sans-serif">Dance Fitness</text>
+
+  <!-- QKids / Online ESL 2019–present  x=540 w=140 -->
+  <rect x="540" y="223" width="140" height="16" rx="3" fill="#2e6b6b">
+    <title>QKids / VIPKids / Native Camp — Online ESL Teacher: 2019–present</title>
+  </rect>
+  <text x="543" y="234" font-size="7.5" fill="white" font-family="Helvetica, Arial, sans-serif">Online ESL / Tutoring</text>
+
+  <!-- Valencia College 2024–present  x=640 w=40 -->
+  <rect x="640" y="243" width="40" height="16" rx="3" fill="#2e6b6b">
+    <title>Valencia College — English Professor: 2024–present</title>
+  </rect>
+  <text x="643" y="254" font-size="7.5" fill="white" font-family="Helvetica, Arial, sans-serif">Valencia</text>
+
+  <line x1="120" y1="268" x2="680" y2="268" stroke="#f2f2f2" stroke-width="1"/>
+
+
+  <!-- ══════════════════════════════════════════
+       ROW 6 — Studio &amp; Entrepreneurship  #7a6820
+       y=275
+       ══════════════════════════════════════════ -->
+
+  <text x="116" y="283" text-anchor="end" font-size="9" fill="#7a6820" font-family="Georgia, 'Times New Roman', serif">Studio &amp;</text>
+  <text x="116" y="294" text-anchor="end" font-size="9" fill="#7a6820" font-family="Georgia, 'Times New Roman', serif">Entrepreneurship</text>
+
+  <!-- West Side Gymnastics 1998–2006  x=120 w=160 -->
+  <rect x="120" y="275" width="160" height="16" rx="3" fill="#7a6820" opacity="0.80">
+    <title>West Side Gymnastics School — Coach: 1998–2006</title>
+  </rect>
+  <text x="123" y="286" font-size="7.5" fill="white" font-family="Helvetica, Arial, sans-serif">West Side Gymnastics</text>
+
+  <!-- West Side Gymnastics return 2014–2019  x=440 w=100 -->
+  <rect x="440" y="275" width="100" height="16" rx="3" fill="#7a6820" opacity="0.80">
+    <title>West Side Gymnastics School — Coach (return): 2014–2019</title>
+  </rect>
+  <text x="443" y="286" font-size="7.5" fill="white" font-family="Helvetica, Arial, sans-serif">Gymnastics (return)</text>
+
+  <!-- Deviant Dance Tribe 2020–2022  x=560 w=40 -->
+  <rect x="560" y="275" width="40" height="16" rx="3" fill="#7a6820">
+    <title>Deviant Dance Tribe — Aerial Arts Director: 2020–2022</title>
+  </rect>
+
+  <!-- Trio Pole Patio 2023–present  x=620 w=60 -->
+  <rect x="620" y="275" width="60" height="16" rx="3" fill="#7a6820">
+    <title>Trio Pole Patio — Owner / Instructor: 2023–present</title>
+  </rect>
+  <text x="623" y="286" font-size="7.5" fill="white" font-family="Helvetica, Arial, sans-serif">Trio Pole</text>
+
+</svg>

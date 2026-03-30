@@ -52,6 +52,18 @@ h1 {
   font-style: italic;
 }
 
+/* ── Timeline ── */
+
+.timeline {
+  margin: 0 0 2.75rem;
+}
+
+.timeline img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* ── Divider ── */
 
 hr {
