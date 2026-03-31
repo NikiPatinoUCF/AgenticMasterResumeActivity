@@ -1,34 +1,37 @@
 /* ============================================================
    Nicole (Niki) Patino — Teaching Portfolio
-   Audience: hiring committees (higher ed / K–12 / language ed)
+   Theme: minimalist black and gold
    ============================================================ */
 
-/* ----- Reset & box model ----- */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:         #0c0c0c;
+  --surface:    #131313;
+  --gold:       #c4973e;
+  --gold-light: #e2c06a;
+  --gold-dim:   #5c4418;
+  --text:       #d8d4cb;
+  --text-muted: #706c64;
+  --rule:       #1e1e1e;
 }
 
-/* ----- Base ----- */
+html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+
 body {
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.75;
-  color: #1c1c1c;
-  background: #f5f5f3;
+  color: var(--text);
+  background: var(--bg);
 }
 
-a {
-  color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
+a { color: var(--gold); text-decoration: underline; text-underline-offset: 2px; }
 
-/* ----- Header ----- */
+/* ── Header ── */
 header {
-  background: #1e2a3a;
-  color: #eef0f4;
+  background: var(--surface);
+  border-bottom: 1px solid var(--gold-dim);
   padding: 3rem 2rem 2.75rem;
   text-align: center;
 }
@@ -37,99 +40,86 @@ header h1 {
   font-size: 2.1rem;
   font-weight: normal;
   letter-spacing: 0.03em;
-  color: #ffffff;
+  color: var(--gold-light);
 }
 
 header .subtitle {
   margin-top: 0.5rem;
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #8fa3b8;
+  color: var(--text-muted);
 }
 
 header .contact {
   margin-top: 0.9rem;
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 0.88rem;
-  color: #b0bbc8;
+  font-size: 0.85rem;
+  color: var(--text-muted);
 }
 
-/* ----- Main container ----- */
+/* ── Main ── */
 main {
   max-width: 880px;
   margin: 0 auto;
   padding: 3rem 2.5rem 4.5rem;
 }
 
-/* ----- Sections ----- */
+/* ── Sections ── */
 section {
-  margin-bottom: 0;
   padding: 2.5rem 0;
-  border-bottom: 1px solid #d8d8d4;
+  border-bottom: 1px solid var(--rule);
 }
 
-section:first-child {
-  padding-top: 2.75rem;
-}
-
-section:last-child {
-  border-bottom: none;
-}
+section:last-child { border-bottom: none; }
 
 .section-label {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 0.68rem;
+  font-size: 0.625rem;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #7a7a72;
+  color: var(--gold);
   margin-bottom: 1.4rem;
 }
 
-/* ----- Profile summary cards ----- */
+/* ── Summary cards ── */
 .summary-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
+  gap: 1px;
+  background: var(--rule);
+  outline: 1px solid var(--rule);
 }
 
 .summary-card {
-  background: #ffffff;
-  border: 1px solid #ddddd8;
-  border-top: 3px solid #1e2a3a;
-  padding: 1.4rem 1.5rem 1.5rem;
+  background: var(--surface);
+  border-left: 2px solid var(--gold-dim);
+  padding: 1.4rem 1.5rem;
 }
 
 .summary-card h3 {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.625rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #4a5568;
+  color: var(--gold);
   margin-bottom: 0.65rem;
 }
 
-.summary-card p {
-  font-size: 0.94rem;
-  color: #2d2d2d;
-}
+.summary-card p { font-size: 0.94rem; color: var(--text); }
 
-/* ----- Experience entries ----- */
+/* ── Entries ── */
 .entry {
   margin-bottom: 2.5rem;
   padding-bottom: 2.25rem;
-  border-bottom: 1px solid #ebebе8;
+  border-bottom: 1px solid var(--rule);
 }
 
-.entry:last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
-  border-bottom: none;
-}
+.entry:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
 
 .entry-header {
   display: flex;
@@ -144,133 +134,105 @@ section:last-child {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 1rem;
   font-weight: 700;
-  color: #1e2a3a;
+  color: var(--gold-light);
 }
 
 .entry-dates {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 0.82rem;
-  color: #6b7280;
+  color: var(--text-muted);
   white-space: nowrap;
 }
 
 .entry-meta {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 0.82rem;
-  color: #888880;
+  color: var(--text-muted);
   margin-bottom: 0.8rem;
 }
 
 .entry-group-label {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 0.68rem;
+  font-size: 0.625rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #9ca3af;
+  color: var(--gold-dim);
+  filter: brightness(1.5);
   margin: 1rem 0 0.4rem;
 }
 
-/* ----- Lists ----- */
-ul {
-  padding-left: 1.25rem;
-}
+/* ── Lists ── */
+ul { padding-left: 1.25rem; }
 
-li {
-  font-size: 0.94rem;
-  color: #2d2d2d;
-  margin-bottom: 0.35rem;
-}
+li { font-size: 0.94rem; color: var(--text); margin-bottom: 0.35rem; }
+li:last-child { margin-bottom: 0; }
 
-li:last-child {
-  margin-bottom: 0;
-}
-
-/* ----- Education entries ----- */
-.edu-entry {
-  margin-bottom: 1.4rem;
-}
-
-.edu-entry:last-child {
-  margin-bottom: 0;
-}
+/* ── Education ── */
+.edu-entry { margin-bottom: 1.4rem; }
+.edu-entry:last-child { margin-bottom: 0; }
 
 .edu-degree {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-weight: 700;
   font-size: 0.96rem;
-  color: #1e2a3a;
+  color: var(--text);
 }
 
 .edu-meta {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 0.82rem;
-  color: #6b7280;
+  color: var(--text-muted);
   margin-bottom: 0.3rem;
 }
 
-.edu-entry ul {
-  margin-top: 0.3rem;
-}
+.edu-entry ul { margin-top: 0.3rem; }
 
-/* ----- Credentials & Tools ----- */
+/* ── Tools ── */
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2.5rem;
 }
 
-.tool-group {
-  margin-bottom: 1.25rem;
-}
-
-.tool-group:last-child {
-  margin-bottom: 0;
-}
+.tool-group { margin-bottom: 1.25rem; }
+.tool-group:last-child { margin-bottom: 0; }
 
 .tool-group h3 {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.625rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #4a5568;
+  color: var(--gold);
   margin-bottom: 0.5rem;
 }
 
-.tool-group p {
-  font-size: 0.92rem;
-  color: #2d2d2d;
-}
+.tool-group p { font-size: 0.92rem; color: var(--text); }
 
-.cred-list {
-  list-style: none;
-  padding: 0;
-}
+.cred-list { list-style: none; padding: 0; }
 
 .cred-list li {
   font-size: 0.94rem;
   padding: 0.5rem 0;
-  border-bottom: 1px solid #eeeee9;
-  color: #2d2d2d;
+  border-bottom: 1px solid var(--rule);
+  color: var(--text);
 }
 
-.cred-list li:last-child {
-  border-bottom: none;
-}
+.cred-list li:last-child { border-bottom: none; }
 
-/* ----- Footer ----- */
+/* ── Footer ── */
 footer {
   text-align: center;
   padding: 1.5rem 1rem;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 0.76rem;
-  color: #b0b0a8;
-  border-top: 1px solid #d8d8d4;
-  background: #f5f5f3;
+  color: var(--text-muted);
+  border-top: 1px solid var(--rule);
+  background: var(--surface);
 }
 
-/* ----- Responsive ----- */
+/* ── Responsive ── */
 @media (max-width: 640px) {
   header h1     { font-size: 1.6rem; }
   main          { padding: 2rem 1.25rem 3rem; }
@@ -278,19 +240,13 @@ footer {
   .two-col      { grid-template-columns: 1fr; }
 }
 
-/* ----- Print ----- */
+/* ── Print ── */
 @media print {
-  body    { background: #fff; font-size: 11pt; }
-  header  { background: #fff; color: #000; padding: 0 0 1rem; border-bottom: 2px solid #000; }
-  header h1        { color: #000; font-size: 16pt; }
-  header .subtitle { color: #444; }
-  header .contact  { color: #444; }
-  main    { padding: 1rem 0; max-width: 100%; }
-  section { padding: 1rem 0; }
-  .summary-card {
-    border-top-color: #000;
-    break-inside: avoid;
-  }
-  .entry  { break-inside: avoid; }
-  footer  { display: none; }
+  body   { background: #fff; color: #000; font-size: 11pt; }
+  header { background: #fff; color: #000; padding: 0 0 1rem; border-bottom: 2px solid #000; }
+  header h1 { color: #000; font-size: 16pt; }
+  main   { padding: 1rem 0; max-width: 100%; }
+  .summary-card { background: none; border-left-color: #000; break-inside: avoid; }
+  .entry { break-inside: avoid; }
+  footer { display: none; }
 }

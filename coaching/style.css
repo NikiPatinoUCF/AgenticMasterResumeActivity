@@ -1,48 +1,31 @@
 /* ============================================================
    Nicole (Niki) Patino — Writing Mentor & Life Coach
-   Audience: coaching clients, writers seeking development,
-             people navigating creative or personal transition
+   Theme: minimalist black and gold
    ============================================================ */
 
-/* ── Reset ── */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* ── Design tokens ── */
 :root {
-  --font-serif: Georgia, "Times New Roman", serif;
-  --font-sans:  "Helvetica Neue", Arial, sans-serif;
-
-  --ink:        #1c1c1c;
-  --mid:        #3d3d3d;
-  --muted:      #6b6560;
-  --rule:       #d9d2c8;
-  --accent:     #3b5e52;       /* deep warm green */
-  --accent-dim: #ebf2ee;       /* soft mint wash */
-  --bg:         #f9f6f1;       /* warm off-white */
-  --surface:    #ffffff;
-  --disney:     #1a3a5c;       /* separate navy for Disney section */
-  --disney-dim: #e8edf5;
-
+  --bg:         #0c0c0c;
+  --surface:    #131313;
+  --gold:       #c4973e;
+  --gold-light: #e2c06a;
+  --gold-dim:   #5c4418;
+  --text:       #d8d4cb;
+  --text-muted: #706c64;
+  --rule:       #1e1e1e;
   --max-width:  760px;
   --gutter:     2rem;
 }
 
-/* ── Base ── */
-html {
-  font-size: 16px;
-  -webkit-text-size-adjust: 100%;
-}
+html { font-size: 16px; -webkit-text-size-adjust: 100%; }
 
 body {
-  font-family: var(--font-serif);
+  font-family: Georgia, 'Times New Roman', serif;
   font-size: 1rem;
   line-height: 1.75;
-  color: var(--ink);
-  background-color: var(--bg);
+  color: var(--text);
+  background: var(--bg);
 }
 
 /* ── Page wrapper ── */
@@ -56,24 +39,23 @@ body {
 header {
   padding-bottom: 1.75rem;
   margin-bottom: 0.25rem;
-  border-bottom: 2px solid var(--accent);
+  border-bottom: 1px solid var(--gold-dim);
 }
 
 header h1 {
-  font-family: var(--font-serif);
   font-size: 2.125rem;
   font-weight: normal;
   letter-spacing: 0.01em;
-  color: var(--accent);
+  color: var(--gold-light);
   line-height: 1.2;
 }
 
 header .subtitle {
-  font-family: var(--font-sans);
-  font-size: 0.8125rem;
-  letter-spacing: 0.1em;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--text-muted);
   margin-top: 0.4rem;
 }
 
@@ -82,28 +64,21 @@ header .subtitle {
   flex-wrap: wrap;
   gap: 0.25rem 1.5rem;
   margin-top: 1rem;
-  font-family: var(--font-sans);
+  font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 0.8rem;
-  color: var(--mid);
+  color: var(--text-muted);
 }
 
 .contact-strip a {
-  color: var(--accent);
+  color: var(--gold);
   text-decoration: none;
   border-bottom: 1px solid transparent;
-  transition: border-color 0.15s;
 }
 
-.contact-strip a:hover,
-.contact-strip a:focus {
-  border-bottom-color: var(--accent);
-  outline: none;
-}
+.contact-strip a:hover { border-bottom-color: var(--gold); }
 
-/* ── Section layout ── */
-section {
-  margin-top: 3rem;
-}
+/* ── Sections ── */
+section { margin-top: 3rem; }
 
 section + section {
   padding-top: 2.75rem;
@@ -111,165 +86,106 @@ section + section {
 }
 
 h2 {
-  font-family: var(--font-sans);
-  font-size: 0.6875rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.625rem;
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--gold);
   margin-bottom: 1.5rem;
 }
 
-/* Disney section gets its own accent color */
-.disney-section h2 {
-  color: var(--disney);
-}
+.disney-section h2 { color: var(--gold); }
 
-/* ── Positioning statements (About) ── */
+/* ── Statements ── */
 .statements {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap: 1px;
+  background: var(--rule);
+  outline: 1px solid var(--rule);
 }
 
 .statement {
+  background: var(--surface);
   padding: 1rem 1.125rem;
-  background: var(--accent-dim);
-  border-left: 3px solid var(--accent);
+  border-left: 2px solid var(--gold-dim);
 }
 
 .statement h3 {
-  font-family: var(--font-sans);
-  font-size: 0.7rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.625rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--gold);
   margin-bottom: 0.45rem;
 }
 
-.statement p {
-  font-size: 0.875rem;
-  line-height: 1.65;
-  color: var(--ink);
-}
+.statement p { font-size: 0.875rem; line-height: 1.65; color: var(--text); }
 
-/* ── Experience entries ── */
-.entry {
-  margin-bottom: 2.25rem;
-}
+/* ── Entries ── */
+.entry { margin-bottom: 2.25rem; }
+.entry:last-child { margin-bottom: 0; }
 
-.entry:last-child {
-  margin-bottom: 0;
-}
-
-.entry-header {
-  margin-bottom: 0.6rem;
-}
+.entry-header { margin-bottom: 0.6rem; }
 
 .entry-header h3 {
-  font-family: var(--font-serif);
+  font-family: Georgia, serif;
   font-size: 1rem;
   font-weight: bold;
-  color: var(--ink);
+  color: var(--text);
 }
 
 .entry-header .meta {
-  font-family: var(--font-sans);
+  font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 0.8rem;
-  color: var(--muted);
+  color: var(--text-muted);
   margin-top: 0.1rem;
 }
 
 .entry-body h4 {
-  font-family: var(--font-sans);
-  font-size: 0.68rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.625rem;
   font-weight: 700;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--gold-dim);
+  filter: brightness(1.6);
   margin: 1rem 0 0.35rem;
 }
 
-/* Disney entries — blue-tinted header line */
-.disney-section .entry-header h3 {
-  color: var(--disney);
-}
+.disney-section .entry-header h3 { color: var(--gold-light); }
 
 /* ── Lists ── */
-ul {
-  padding-left: 1.2rem;
-}
+ul { padding-left: 1.2rem; }
+ul li { font-size: 0.9375rem; line-height: 1.7; margin-bottom: 0.3rem; color: var(--text); }
 
-ul li {
-  font-size: 0.9375rem;
-  line-height: 1.7;
-  margin-bottom: 0.3rem;
-  color: var(--ink);
-}
+/* ── Studio / works / edu lists ── */
+.studio-list,
+.works-list,
+.edu-list { list-style: none; padding: 0; }
 
-/* ── Studio / entrepreneurial items ── */
-.studio-list {
-  list-style: none;
-  padding: 0;
-}
-
-.studio-list li {
+.studio-list li,
+.works-list li,
+.edu-list li {
   padding: 0.65rem 0;
   border-bottom: 1px solid var(--rule);
   font-size: 0.9375rem;
   line-height: 1.65;
+  color: var(--text);
 }
 
-.studio-list li:last-child {
-  border-bottom: none;
-}
-
-/* ── Published works ── */
-.works-list {
-  list-style: none;
-  padding: 0;
-}
-
-.works-list li {
-  padding: 0.65rem 0;
-  border-bottom: 1px solid var(--rule);
-  font-size: 0.9375rem;
-  line-height: 1.65;
-}
-
-.works-list li:last-child {
-  border-bottom: none;
-}
+.studio-list li:last-child,
+.works-list li:last-child,
+.edu-list li:last-child { border-bottom: none; }
 
 .works-list a {
-  color: var(--accent);
+  color: var(--gold);
   text-decoration: none;
   border-bottom: 1px solid transparent;
 }
-
-.works-list a:hover,
-.works-list a:focus {
-  border-bottom-color: var(--accent);
-  outline: none;
-}
-
-/* ── Education ── */
-.edu-list {
-  list-style: none;
-  padding: 0;
-}
-
-.edu-list li {
-  padding: 0.6rem 0;
-  border-bottom: 1px dotted var(--rule);
-  font-size: 0.9375rem;
-  line-height: 1.65;
-}
-
-.edu-list li:last-child {
-  border-bottom: none;
-}
+.works-list a:hover { border-bottom-color: var(--gold); }
 
 /* ── Credentials ── */
 .credentials-list {
@@ -281,45 +197,35 @@ ul li {
 }
 
 .credentials-list li {
-  font-family: var(--font-sans);
+  font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 0.8125rem;
-  color: var(--mid);
+  color: var(--text-muted);
   background: var(--surface);
   border: 1px solid var(--rule);
   padding: 0.35rem 0.8rem;
 }
 
-/* ── Inline ── */
 em     { font-style: italic; }
 strong { font-weight: bold; }
 
-/* ── Responsive — tablet ── */
+/* ── Responsive ── */
 @media (max-width: 700px) {
   :root { --gutter: 1.375rem; }
   .statements { grid-template-columns: 1fr; }
 }
 
-/* ── Responsive — mobile ── */
 @media (max-width: 480px) {
-  header h1  { font-size: 1.625rem; }
-  .page      { padding-top: 2.25rem; padding-bottom: 4rem; }
+  header h1 { font-size: 1.625rem; }
+  .page     { padding-top: 2.25rem; padding-bottom: 4rem; }
 }
 
 /* ── Print ── */
 @media print {
-  :root {
-    --bg:         #ffffff;
-    --surface:    #ffffff;
-    --accent-dim: #f0f0f0;
-    --disney-dim: #f0f0f0;
-    --rule:       #bbbbbb;
-  }
-
-  body { font-size: 10pt; line-height: 1.5; background: #fff; color: #000; }
+  body { background: #fff; color: #000; font-size: 10pt; line-height: 1.5; }
   .page { max-width: 100%; padding: 0; }
   header h1 { color: #000; font-size: 16pt; }
   h2 { color: #000; }
-  .statement { border-left-color: #000; background: none; }
+  .statement { background: none; border-left-color: #000; }
   .contact-strip a, .works-list a { color: #000; border-bottom: none; }
   section + section { page-break-inside: avoid; }
   .entry { page-break-inside: avoid; }

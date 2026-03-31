@@ -1,41 +1,32 @@
 /* ============================================================
    Nicole (Niki) Patino — Entrepreneur Profile
-   Audience: investors, collaborators, business partners
+   Theme: minimalist black and gold
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500&display=swap');
-
-/* ── Reset ── */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* ── Design tokens ── */
 :root {
-  --navy:        #1a2942;
-  --navy-light:  #243650;
-  --gold:        #a07830;
-  --gold-light:  #c49a50;
-  --gold-tint:   #f7f2ea;
-  --ink:         #1c1c1e;
-  --ink-mid:     #3a3a3c;
-  --ink-muted:   #6e6e73;
-  --border:      #d1d1d6;
-  --border-light:#e8e8e4;
-  --surface:     #f9f8f6;
-  --white:       #ffffff;
+  --bg:         #0c0c0c;
+  --surface:    #131313;
+  --gold:       #c4973e;
+  --gold-light: #e2c06a;
+  --gold-dim:   #5c4418;
+  --text:       #d8d4cb;
+  --text-muted: #706c64;
+  --rule:       #1e1e1e;
 
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Helvetica Neue', Arial, sans-serif;
+  --font-serif: Georgia, 'Times New Roman', serif;
 
   --max-width: 860px;
   --section-gap: 3.5rem;
   --entry-gap: 2.25rem;
 }
 
-/* ── Base ── */
 html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
@@ -47,8 +38,8 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.75;
-  color: var(--ink);
-  background: var(--white);
+  color: var(--text);
+  background: var(--bg);
 }
 
 a {
@@ -67,8 +58,9 @@ em, cite {
 
 /* ── Header ── */
 header {
-  background: var(--navy);
-  color: var(--white);
+  background: var(--surface);
+  border-bottom: 1px solid var(--gold-dim);
+  color: var(--text);
   padding: 4rem 2rem 3.5rem;
   text-align: center;
   position: relative;
@@ -78,17 +70,17 @@ header::after {
   content: '';
   display: block;
   width: 3rem;
-  height: 2px;
-  background: var(--gold);
+  height: 1px;
+  background: var(--gold-dim);
   margin: 1.75rem auto 0;
 }
 
 header h1 {
   font-family: var(--font-serif);
   font-size: 2.25rem;
-  font-weight: 400;
+  font-weight: normal;
   letter-spacing: 0.02em;
-  color: var(--white);
+  color: var(--gold-light);
   margin-bottom: 0.6rem;
 }
 
@@ -97,7 +89,7 @@ header .subtitle {
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--text-muted);
 }
 
 /* ── Main layout ── */
@@ -113,28 +105,27 @@ section {
 }
 
 section + section {
-  border-top: 1px solid var(--border-light);
+  border-top: 1px solid var(--rule);
   padding-top: var(--section-gap);
 }
 
-/* Section label */
 h2 {
   font-family: var(--font-sans);
-  font-size: 0.65rem;
-  font-weight: 600;
+  font-size: 0.625rem;
+  font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--gold);
   margin-bottom: 2rem;
   padding-bottom: 0.6rem;
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--rule);
 }
 
 /* ── Positioning statements ── */
 .statement {
   margin-bottom: 2rem;
   padding-left: 1.25rem;
-  border-left: 2px solid var(--border-light);
+  border-left: 2px solid var(--gold-dim);
 }
 
 .statement:last-child {
@@ -147,13 +138,13 @@ h2 {
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--navy);
+  color: var(--gold);
   margin-bottom: 0.5rem;
 }
 
 .statement p {
   font-size: 0.975rem;
-  color: var(--ink-mid);
+  color: var(--text);
   line-height: 1.8;
 }
 
@@ -179,27 +170,26 @@ h2 {
   font-family: var(--font-sans);
   font-size: 1rem;
   font-weight: 600;
-  color: var(--ink);
+  color: var(--text);
   letter-spacing: -0.01em;
 }
 
 .entry-date {
   font-size: 0.8rem;
   font-weight: 400;
-  color: var(--ink-muted);
+  color: var(--text-muted);
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
 }
 
 .entry-sub {
   font-size: 0.85rem;
-  color: var(--ink-muted);
+  color: var(--text-muted);
   margin-bottom: 0.75rem;
   font-weight: 300;
   letter-spacing: 0.01em;
 }
 
-/* Angle label (sub-category within an entry) */
 .entry-angle {
   display: inline-block;
   font-size: 0.65rem;
@@ -221,7 +211,7 @@ ul li {
   padding-left: 1.25rem;
   margin-bottom: 0.35rem;
   font-size: 0.925rem;
-  color: var(--ink-mid);
+  color: var(--text-muted);
   line-height: 1.7;
 }
 
@@ -232,7 +222,7 @@ ul li::before {
   top: 0.72em;
   width: 5px;
   height: 1px;
-  background: var(--gold-light);
+  background: var(--gold-dim);
 }
 
 /* ── Technology grid ── */
@@ -247,15 +237,15 @@ ul li::before {
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--navy);
+  color: var(--gold);
   margin-bottom: 0.5rem;
   padding-bottom: 0.4rem;
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--rule);
 }
 
 .tech-group p {
   font-size: 0.875rem;
-  color: var(--ink-mid);
+  color: var(--text-muted);
   line-height: 1.65;
 }
 
@@ -264,8 +254,7 @@ ul li::before {
   margin-bottom: 1rem;
   padding: 1rem 1.25rem;
   background: var(--surface);
-  border-radius: 3px;
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--rule);
 }
 
 .pub:last-child {
@@ -274,31 +263,30 @@ ul li::before {
 
 .pub p {
   font-size: 0.925rem;
-  color: var(--ink-mid);
+  color: var(--text-muted);
   line-height: 1.7;
 }
 
 .pub cite {
-  color: var(--ink);
+  color: var(--text);
   font-weight: 400;
 }
 
 /* ── Notes callout ── */
 .notes {
-  background: var(--gold-tint);
-  border-left: 3px solid var(--gold);
+  background: var(--surface);
+  border-left: 3px solid var(--gold-dim);
   padding: 1.5rem 1.75rem;
-  border-radius: 0 3px 3px 0;
 }
 
 .notes ul li {
   margin-bottom: 0.6rem;
   font-size: 0.9rem;
-  color: var(--ink-mid);
+  color: var(--text-muted);
 }
 
 .notes ul li::before {
-  background: var(--gold);
+  background: var(--gold-dim);
 }
 
 .notes ul li:last-child {
@@ -310,7 +298,7 @@ footer {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 1.75rem 2rem 3rem;
-  border-top: 1px solid var(--border-light);
+  border-top: 1px solid var(--rule);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -320,13 +308,13 @@ footer {
 
 footer p {
   font-size: 0.75rem;
-  color: var(--ink-muted);
+  color: var(--text-muted);
   letter-spacing: 0.03em;
 }
 
 footer .footer-source {
   font-size: 0.7rem;
-  color: var(--border);
+  color: var(--rule);
 }
 
 /* ── Responsive ── */
@@ -400,11 +388,6 @@ footer .footer-source {
 
   .entry {
     page-break-inside: avoid;
-  }
-
-  .notes {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
   }
 
   a {
