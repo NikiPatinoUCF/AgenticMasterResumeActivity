@@ -50,6 +50,17 @@
   --color-accent-lt: #dce8f2;   /* light tint for chips */
 }
 
+/* ── Links ──────────────────────────────────────────────── */
+a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: var(--color-ink);
+}
+
 /* ── Base ───────────────────────────────────────────────── */
 html {
   font-size: var(--size-base);
